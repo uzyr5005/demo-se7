@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fdf8f3;
+  }
+  
+  header {
+    background-color: #302C28;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    padding: 40px 30px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .artwork-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    padding: 30px;
+  }
+  
+  .artwork-image {
+    flex: 1 1 400px;
+    border-radius: 16px;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .details {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .details h1 {
+    margin: 0 0 10px;
+    color: #302C28;
+  }
+  
+  .details h3 {
+    margin: 0 0 20px;
+    color: #666;
+    font-weight: normal;
+  }
+  
+  .description {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .btn {
+    padding: 12px 24px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn.favorite {
+    background-color: #e63946;
+    color: white;
+  }
+  
+  .btn.favorite:hover {
+    background-color: #b82c35;
+  }
+  
+  .btn.share {
+    background-color: #302C28;
+    color: white;
+  }
+  
+  .btn.share:hover {
+    background-color: #524e4a;
+  }
+  
+  @media (max-width: 768px) {
+    .artwork-container {
+      flex-direction: column;
+    }
+  }
+  
+  .auth-buttons {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    background-color: #FFA552;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .btn.login {
+    background-color: #444;
+  }
+  
+  .btn:hover {
+    background-color: #ff8c2b;
+  }
+  
+  .btn.login:hover {
+    background-color: #222;
+  }
+  

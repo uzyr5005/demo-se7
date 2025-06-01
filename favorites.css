@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #eeceda, #f6ebda);
+  }
+  
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.85); /* more opaque white */
+    backdrop-filter: saturate(180%) blur(15px);
+    -webkit-backdrop-filter: saturate(180%) blur(15px);
+    border-bottom: 1px solid rgba(200, 200, 200, 0.5);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    transition: background-color 0.3s ease;
+  }
+  
+  header:hover {
+    background: rgba(255, 255, 255, 0.95);
+  }
+  
+  .logo {
+    font-size: 28px;
+    font-weight: 900;
+    color: #4a3c31; /* dark warm color */
+    letter-spacing: 1.2px;
+    user-select: none;
+    text-shadow: 0 0 3px #fff7;
+    cursor: default;
+    transition: color 0.3s ease;
+  }
+  
+  nav a {
+    color: #6d5848;
+    font-weight: 600;
+    margin-left: 25px;
+    text-decoration: none;
+    position: relative;
+    padding: 4px 0;
+    transition: color 0.3s ease;
+    user-select: none;
+  }
+  
+  nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    bottom: -4px;
+    left: 0;
+    background: #ffb347;
+    border-radius: 4px;
+    transition: width 0.35s ease;
+  }
+  
+  nav a:hover,
+  nav a.active {
+    color: #d48e0d;
+  }
+  
+  nav a:hover::after,
+  nav a.active::after {
+    width: 100%;
+  }
+  
+  .auth-buttons {
+    margin-left: auto;
+    display: flex;
+    gap: 14px;
+  }
+  
+  .btn {
+    background: linear-gradient(145deg, #ffbd45, #ffa800);
+    color: #442c00;
+    font-weight: 700;
+    padding: 10px 22px;
+    border-radius: 24px;
+    box-shadow:
+      0 4px 12px #ffae0088,
+      inset 0 2px 6px #fff6;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    user-select: none;
+    cursor: pointer;
+  }
+  
+  .btn.login {
+    background: linear-gradient(145deg, #444444dd, #222222cc);
+    color: #ddd;
+    box-shadow:
+      0 4px 10px #000000bb,
+      inset 0 2px 8px #555555aa;
+  }
+  
+  .btn:hover {
+    background: linear-gradient(145deg, #fff08c, #ffca4d);
+    color: #5a3f00;
+    box-shadow:
+      0 6px 16px #ffc200cc,
+      inset 0 3px 8px #fffef4;
+    transform: translateY(-2px);
+  }
+  
+  .btn.login:hover {
+    background: linear-gradient(145deg, #666666dd, #333333cc);
+    color: #fff;
+    box-shadow:
+      0 6px 16px #222222cc,
+      inset 0 3px 8px #888888cc;
+    transform: translateY(-2px);
+  }
+  
+  main {
+    padding: 40px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #302C28;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  
+  .card h3 {
+    margin: 15px 0 5px;
+    color: #302C28;
+  }
+  
+  .card p {
+    color: #777;
+    font-size: 14px;
+  }
+  
+  .auth-buttons {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    background-color: #FFA552;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s;
+  }
+  
+  .btn.login {
+    background-color: #444;
+  }
+  
+  .btn:hover {
+    background-color: #ff8c2b;
+  }
+  
+  .btn.login:hover {
+    background-color: #222;
+  }
+  

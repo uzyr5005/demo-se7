@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - ArtVista</title>
+  <link rel="stylesheet" href="signup.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">🎨 ArtVista</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="explore.html">Explore</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+    <div class="auth-buttons">
+      <a href="signup.html" class="btn">Sign Up</a>
+      <a href="login.html" class="btn login">Login</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="signup-container">
+      <h1>Create Your Account</h1>
+      <form>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="password" placeholder="Password" required />
+        <input type="password" placeholder="Confirm Password" required />
+        <button type="submit">Sign Up</button>
+      </form>
+      <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+  </main>
+
+  <script>
+    const form = document.querySelector('form');
+  
+    form.addEventListener('submit', (e) => {
+      const fullName = form.querySelector('input[type="text"]').value.trim();
+      const email = form.querySelector('input[type="email"]').value.trim();
+      const password = form.querySelector('input[type="password"]:nth-of-type(1)').value.trim();
+      const confirmPassword = form.querySelector('input[type="password"]:nth-of-type(2)').value.trim();
+  
+      if (!fullName) {
+        alert('Please enter your full name.');
+        e.preventDefault();
+        return;
+      }
+  
+      if (!email) {
+        alert('Please enter your email address.');
+        e.preventDefault();
+        return;
+      }
+  
+      if (!password) {
+        alert('Please enter a password.');
+        e.preventDefault();
+        return;
+      }
+  
+      if (!confirmPassword) {
+        alert('Please confirm your password.');
+        e.preventDefault();
+        return;
+      }
+  
+      if (password !== confirmPassword) {
+        alert('Passwords do not match.');
+        e.preventDefault();
+        return;
+      }
+  
+      // You can add more validations here (email format, password strength)
+    });
+  </script>
+  
+</body>
+</html>

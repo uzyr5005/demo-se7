@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Artwork Details - ArtVista</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdf8f3;
+    }
+
+    header {
+      background-color: #302C28;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 40px 30px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .artwork-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+
+    .artwork-image {
+      flex: 1 1 400px;
+      border-radius: 16px;
+      max-width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .details {
+      flex: 1 1 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .details h1 {
+      margin: 0 0 10px;
+      color: #302C28;
+    }
+
+    .details h3 {
+      margin: 0 0 20px;
+      color: #666;
+      font-weight: normal;
+    }
+
+    .description {
+      font-size: 16px;
+      color: #444;
+      margin-bottom: 30px;
+      line-height: 1.5;
+    }
+
+    .actions {
+      display: flex;
+      gap: 15px;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn.favorite {
+      background-color: #e63946;
+      color: white;
+    }
+
+    .btn.favorite:hover {
+      background-color: #b82c35;
+    }
+
+    .btn.share {
+      background-color: #302C28;
+      color: white;
+    }
+
+    .btn.share:hover {
+      background-color: #524e4a;
+    }
+
+    @media (max-width: 768px) {
+      .artwork-container {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">🎨 ArtVista</div>
+    <nav>
+      <a href="home.html">Home</a>
+      <a href="explore.html">Explore</a>
+      <a href="favorites.html">Favorites</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+
+    <div class="auth-buttons">
+      <a href="signup.html" class="btn">Sign Up</a>
+      <a href="login.html" class="btn login">Login</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="artwork-container">
+      <img src="https://via.placeholder.com/600x400" alt="Serenity Artwork" class="artwork-image" />
+      <div class="details">
+        <h1>Serenity</h1>
+        <h3>by Emma Liu</h3>
+        <p class="description">
+          A calming, pastel-toned painting capturing the tranquility of a quiet lakeside morning.
+          The brushstrokes convey softness and peace.
+        </p>
+
+        <div class="actions">
+          <button class="btn favorite">❤ Add to Favorites</button>
+          <button class="btn share">🔗 Share</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
